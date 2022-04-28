@@ -1,0 +1,42 @@
+## api methods for painter
+
+# GLOBAL INTERFACE
+painter.get();
+painter.get(id);
+painter.get(id).element();
+painter.get(id).spec();
+painter.get(id).update(spec);
+painter.get(id).destroy();
+
+# ENTITY FACTORY INTERFACE
+painter.line.get();
+painter.line.get(id);
+painter.line.get(id).id;
+painter.line.get(id).element;
+painter.line.get(id).spec;
+painter.line.get(id).update(spec);
+painter.line.get(id).destroy();
+painter.line.create(spec);
+
+entity
+->element
+->json
+
+## if the ENTITY exists, then the DOM element exists
+## when ENTITY is destroyed, DOM element is destroyed
+## therefore, the ENTITY is a proxy for DOM element
+
+## create a new Line
+let line = new Line(id, spec);
+
+## bind to existing Line
+let line = new Line(id, element);
+### if no ID - add a new one
+
+painter.line.create(spec);
+
+### entity tree model
+group
+--> can create/reference children
+
+only groups can have children? 

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="icon" href="favicon.svg">
+		<style>
+		html, body {
+			margin: 0; 
+			padding: 0;
+			overflow: hidden
+		}
+		svg {
+			position: fixed;
+			top:0;
+			left:0;
+			height:100%;
+			width:100%;
+		}
+		</style>
+	</head>
+	<body>
+		<svg id="container" xmlns="http://www.w3.org/2000/svg" width="980" height="600" viewBox="0 0 980 600">
+			<rect x="0" y="0" width="980" height="600" rx="15" fill="#101010"/>
+			<g id="default"></g>
+		</svg>
+		<script type="module">
+			import main from './main.js';
+			var server = window.location.protocol + '//' + window.location.hostname + ':' + window.location.port;
+			console.log('main: server is [ ' + server + ' ]');
+		</script>
+	</body>
+</html>
