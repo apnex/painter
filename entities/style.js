@@ -56,7 +56,7 @@ class Style extends Entity {
 		let body = this.element().innerHTML;
 
 		// extract and build object
-		const re = /([\w#-]+)\s({[^}]+})/gm;
+		const re = /([\w#-.:]+)\s({[^}]+})/gm;
 		let arr = body.matchAll(re);
 
 		// build object
